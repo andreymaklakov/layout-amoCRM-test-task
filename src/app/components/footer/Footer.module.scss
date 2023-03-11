@@ -1,0 +1,172 @@
+@import "../../../variables.scss";
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  font-family: $fontInter;
+  margin-top: 124px;
+
+  color: $textColor;
+
+  .navigation_container {
+    display: flex;
+  }
+
+  .lastColumn {
+    align-items: flex-end;
+  }
+
+  .menu_columns_wrapper {
+    margin-left: 98px;
+
+    display: flex;
+    gap: 52px;
+  }
+
+  .column_container {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      margin-bottom: 20px;
+
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+
+      color: #656566;
+    }
+
+    a {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+
+      padding-bottom: 10px;
+    }
+
+    .number {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    .icons {
+      margin-top: 21px;
+      display: flex;
+      gap: 10px;
+      margin-bottom: 5px;
+    }
+
+    .confidentials {
+      margin-top: 70px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      span {
+        font-family: $fontMontserrat;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+
+        text-align: right;
+
+        a {
+          font-family: $fontMontserrat;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 15px;
+
+          text-align: right;
+        }
+      }
+
+      .underlined {
+        text-decoration-line: underline;
+      }
+    }
+  }
+}
+
+@media (width <= 700px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+
+    background-color: #0e1014;
+
+    width: 100%;
+
+    margin-top: 55px;
+    padding-top: 35px;
+    padding-left: 16px;
+
+    .navigation_container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: flex-start;
+
+      width: 320px;
+    }
+
+    .lastColumn {
+      width: 320px;
+
+      align-items: flex-start;
+    }
+
+    .menu_columns_wrapper {
+      margin-left: 0;
+
+      display: flex;
+      gap: 38px;
+    }
+
+    .column_container {
+      p {
+        font-size: 12px;
+        line-height: 15px;
+      }
+
+      a {
+        font-size: 14px;
+        line-height: 17px;
+        width: 115px;
+      }
+
+      .icons {
+        margin-top: 8px;
+        margin-bottom: 0px;
+
+        a {
+          width: fit-content;
+        }
+      }
+
+      .confidentials {
+        margin-top: 50px;
+        margin-bottom: 60px;
+
+        span {
+          text-align: left;
+
+          a {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

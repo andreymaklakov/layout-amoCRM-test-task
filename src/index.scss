@@ -1,0 +1,193 @@
+@import "./variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: $textColor;
+}
+
+button {
+  border: none;
+}
+
+main {
+  position: relative;
+  background-color: #0e1014;
+
+  min-width: 1100px;
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+
+  .container {
+    max-width: 1140px;
+    width: 100%;
+    min-width: 1030px;
+
+    min-height: 100vh;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    z-index: 1;
+
+    .content_container {
+      margin-top: 90px;
+
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .purpleBall {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    right: 36vw;
+    top: -2px;
+
+    background: radial-gradient(
+      64% 64% at 27.25% 26.5%,
+      rgba(236, 208, 255, 0.64) 0%,
+      rgba(161, 93, 207, 0.24) 59.67%,
+      rgba(118, 49, 164, 0.208) 78.59%,
+      rgba(86, 24, 128, 0.232) 100%
+    );
+
+    box-shadow: 3px 6px 27px -10px rgba(177, 118, 217, 0.25);
+    filter: blur(5px);
+    backdrop-filter: blur(2px);
+    border-radius: 50%;
+  }
+
+  .redBall {
+    position: absolute;
+
+    background: radial-gradient(
+      64% 64% at 27.25% 26.5%,
+      rgba(255, 208, 208, 0.536) 0%,
+      rgba(212, 93, 93, 0.264) 59.67%,
+      rgba(167, 49, 49, 0.248) 78.59%,
+      rgba(130, 25, 25, 0.248) 100%
+    );
+    box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+    backdrop-filter: blur(2px);
+    border-radius: 50%;
+  }
+
+  .bigRedBall {
+    width: 83px;
+    height: 83px;
+    left: 36.8vw;
+    top: 83px;
+  }
+
+  .smallRedBall {
+    width: 28px;
+    height: 28px;
+    left: 58.8vw;
+    top: 547px;
+
+    filter: blur(2.5px);
+  }
+
+  .purpleLight {
+    position: absolute;
+    width: 259px;
+    height: 259px;
+    left: 38vw;
+    top: -154px;
+
+    background: #833ab4;
+    opacity: 0.5;
+    filter: blur(196px);
+  }
+
+  .redLight {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    left: -102px;
+    top: 251px;
+
+    background: #961a1a;
+    opacity: 0.5;
+    filter: blur(196px);
+  }
+}
+
+@media (width <= 700px) {
+  main {
+    min-width: 320px;
+    width: 100vw;
+
+    .container {
+      min-width: 320px;
+      width: 100%;
+
+      min-height: 100vh;
+      padding: 0;
+      margin: 0;
+
+      z-index: 1;
+
+      display: flex;
+
+      align-items: center;
+      flex-direction: column;
+
+      .content_container {
+        margin-top: 95px;
+        margin-bottom: 59px;
+        width: 320px;
+
+        padding-left: 14px;
+
+        flex-direction: column;
+      }
+    }
+
+    .purpleBall {
+      width: 40px;
+      height: 40px;
+      right: -15px;
+      top: 236px;
+    }
+
+    .bigRedBall {
+      width: 43px;
+      height: 43px;
+      left: 12vw;
+      top: 450px;
+    }
+
+    .smallRedBall {
+      display: none;
+    }
+
+    .redLight {
+      width: 211px;
+      height: 210px;
+      left: -5vw;
+      top: 300px;
+    }
+
+    .purpleLight {
+      width: 259px;
+      height: 259px;
+      right: -15vw;
+      top: 160px;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import "../../../variables.scss";
+
+.firstLine {
+  font-family: $fontInter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+
+  color: $textColor;
+}
+
+.secondLine {
+  font-family: $fontInter;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+
+  background: linear-gradient(92deg, #fcb045 27.14%, #ff3f78 121.36%), #e4e5ea;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.thirdLine {
+  margin-top: 30px;
+
+  font-family: $fontMontserrat;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: $textColor;
+}
+
+@media (width <= 700px) {
+  .firstLine {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .secondLine {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .thirdLine {
+    margin-top: 15px;
+  }
+}

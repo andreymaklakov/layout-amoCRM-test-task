@@ -1,0 +1,151 @@
+@import "../../../variables.scss";
+
+.content_container {
+  padding-top: 15px;
+  color: $textColor;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .firstBlock {
+    font-family: $fontInter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: right;
+
+    .coloredText {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      span {
+        background: linear-gradient(92deg, #fcb045 27.14%, #ff3f78 121.36%),
+          #e4e5ea;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    }
+  }
+
+  .secondBlock {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+
+    div {
+      max-width: 135px;
+      text-align: right;
+
+      .header_mobile {
+        display: none;
+      }
+
+      .header {
+        font-family: $fontInter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+
+        text-align: right;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .content {
+        font-family: $fontMontserrat;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: right;
+
+        margin-top: 6px;
+      }
+    }
+  }
+
+  button {
+    cursor: pointer;
+
+    font-family: $fontInter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: $textColor;
+
+    background: #4077f3;
+
+    width: 262px;
+    height: 61px;
+
+    margin-top: 61px;
+  }
+}
+
+@media (width <= 700px) {
+  .content_container {
+    padding-top: 45px;
+
+    align-items: flex-start;
+
+    .firstBlock {
+      text-align: left;
+
+      .coloredText {
+        text-transform: lowercase;
+        letter-spacing: inherit;
+      }
+    }
+
+    .secondBlock {
+      display: grid;
+      row-gap: 14px;
+      column-gap: 0px;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 20px;
+
+      > div {
+        text-align: left;
+
+        .header {
+          display: none;
+        }
+
+        .content {
+          display: none;
+        }
+
+        .header_mobile {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          width: fit-content;
+          white-space: nowrap;
+
+          font-family: $fontMontserrat;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 16px;
+
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+
+          color: $textColor;
+        }
+      }
+    }
+
+    button {
+      display: none;
+    }
+  }
+}
