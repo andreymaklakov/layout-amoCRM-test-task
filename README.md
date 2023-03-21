@@ -2,7 +2,7 @@
 
 Layout according to the Figma design
 
-Check it:
+Check it: https://zippy-brigadeiros-f5b870.netlify.app/
 
 <div style='dispay:flex; gap:10px align-items:flex-start'>
 <img src='https://i.ibb.co/5F1F3PD/amoCRM.jpg' alt='webpage' style='width:69%; padding:0; margin:0'>
